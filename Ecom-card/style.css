@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+p,
+h2 {
+  margin: 0px;
+}
+.ecom-card {
+  width: 300px;
+  height: 245px;
+  background-color: white;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 14px;
+}
+.ecom-card .card-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.ecom-card .card-img img {
+  max-width: 100%;
+  transition: 0.8s;
+  z-index: 1;
+  position: relative;
+}
+.ecom-card .card-content {
+  text-align: center;
+}
+.ecom-card .card-content button {
+  margin-top: 10px;
+  border: none;
+  font-size: small;
+  border-radius: 20px;
+  padding: 7px 40px;
+  background: coral;
+  color: white;
+  cursor: pointer;
+}
+.ecom-card:hover .card-img img {
+  max-width: 75%;
+}
+.ecom-card::before {
+  content: '';
+  position: absolute;
+  background-color: rgb(78, 165, 195);
+  height: 100%;
+  width: 100%;
+  top: -50%;
+  transform: skewY(325deg);
+  transition: 1s;
+}
+.ecom-card:hover::before {
+  top: -50%;
+  transform: skewY(385deg);
+  background-color: rgb(121, 121, 212);
+}
